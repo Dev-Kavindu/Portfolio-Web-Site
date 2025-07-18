@@ -67,32 +67,12 @@ export default function Portfolio() {
 
   const projects = [
     {
-      name: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration and admin dashboard.",
-      image: "/placeholder.svg?height=200&width=300",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      name: "Task Management App",
-      description: "Collaborative task management tool with real-time updates and team features.",
-      image: "/placeholder.svg?height=200&width=300",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      name: "Weather Dashboard",
-      description: "Beautiful weather app with location-based forecasts and interactive maps.",
-      image: "/placeholder.svg?height=200&width=300",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      name: "Social Media Analytics",
-      description: "Comprehensive analytics dashboard for social media performance tracking and insights.",
-      image: "/placeholder.svg?height=200&width=300",
-      demoUrl: "#",
-      githubUrl: "#",
+      name: "Verbo Voice Converter Web App",
+      description:
+        "An interactive Voice Converter Web App with Text-to-Speech (TTS) and Speech-to-Text (STT) functionalities. Built using HTML, CSS, and JavaScript, it utilizes modern Web Speech APIs to enable seamless text-to-voice conversion and speech transcription. Features a user-friendly interface and cross-browser support for an enhanced experience.",
+      image: "/assets/images/pexels-kaplanart-8134609.jpg", // You can update this to a more relevant image if available
+      demoUrl: "https://verbo-web-application.vercel.app",
+      githubUrl: "https://github.com/Dev-Kavindu/verbo--web-application",
     },
   ]
 
@@ -151,7 +131,7 @@ export default function Portfolio() {
                   {item.label}
                 </button>
               ))}
-              <Link href="https://github.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <Link href="https://github.com/Dev-Kavindu" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Github className="w-5 h-5" />
               </Link>
             </div>
@@ -468,7 +448,7 @@ export default function Portfolio() {
               GitHub & Writing
             </h2>
             <Link
-              href="https://github.com"
+              href="https://github.com/Dev-Kavindu"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-lg"
             >
               <Github className="w-6 h-6 mr-2" />
@@ -559,7 +539,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 sm:mb-0">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
           <div className="flex space-x-6">
-            <Link href="https://github.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+            <Link href="https://github.com/Dev-Kavindu" className="text-gray-400 hover:text-blue-400 transition-colors">
               <Github className="w-6 h-6" />
             </Link>
             <Link href="https://linkedin.com" className="text-gray-400 hover:text-blue-400 transition-colors">
