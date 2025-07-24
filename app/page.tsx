@@ -70,41 +70,83 @@ export default function Portfolio() {
       name: "Verbo Voice Converter Web App",
       description:
         "An interactive Voice Converter Web App with Text-to-Speech (TTS) and Speech-to-Text (STT) functionalities. Built using HTML, CSS, and JavaScript, it utilizes modern Web Speech APIs to enable seamless text-to-voice conversion and speech transcription. Features a user-friendly interface and cross-browser support for an enhanced experience.",
-      image: "/assets/images/pexels-kaplanart-8134609.jpg", // You can update this to a more relevant image if available
+      image: "/assets/images/verbo.png",
       demoUrl: "https://verbo-web-application.vercel.app",
       githubUrl: "https://github.com/Dev-Kavindu/verbo--web-application",
+    },
+    {
+      name: "Personal Portfolio Website",
+      description:
+        "\uD83C\uDF10 Personal Portfolio Website\nI designed and developed this portfolio website using V0.dev, Cursor AI, and deployed it via Netlify. The contact form is powered by Formspree to enable easy communication. This site showcases my projects, skills, and professional background in software development.",
+      image: "/assets/images/portfolio.png",
+      demoUrl: "https://musical-tarsier-e910c0.netlify.app",
+      githubUrl: "https://github.com/Dev-Kavindu/Portfolio-Web-Site",
     },
   ]
 
   const articles = [
     {
-      title: "Building Scalable React Applications",
-      snippet:
-        "Learn the best practices for structuring large React applications with proper state management and component architecture.",
-      url: "#",
+      title: "From Code to Confidence: Why Building Real-World Projects is the Ultimate Developer Hack",
+      snippet: "Discover why hands-on project building is the fastest way to grow as a developer and boost your confidence.",
+      url: "https://medium.com/@codewaveacademy/from-code-to-confidence-why-building-real-world-projects-is-the-ultimate-developer-hack-3c9ac3f0ef8e",
     },
     {
-      title: "Modern CSS Techniques for 2024",
-      snippet:
-        "Explore the latest CSS features including container queries, cascade layers, and modern layout techniques.",
-      url: "#",
+      title: "The Practical Roadmap to Becoming a Job-Ready Developer",
+      snippet: "A step-by-step guide to help you become a job-ready developer with practical skills.",
+      url: "https://medium.com/@codewaveacademy/the-practical-roadmap-to-becoming-a-job-ready-developer-b1fd3e6f6d90",
     },
     {
-      title: "Next.js Performance Optimization",
-      snippet: "Comprehensive guide to optimizing Next.js applications for better performance and user experience.",
-      url: "#",
+      title: "Escaping Tutorial Hell: How to Actually Start Building as a Self-Taught Developer",
+      snippet: "Break free from endless tutorials and start building real projects as a self-taught developer.",
+      url: "https://medium.com/@codewaveacademy/escaping-tutorial-hell-how-to-actually-start-building-as-a-self-taught-developer-f8e41ddf0e0b",
     },
   ]
 
   // Add static certificate data
-  const certificates = [
+  const certificates: Array<{
+    image: string;
+    description: React.ReactNode;
+    link?: string;
+    linkedin?: string;
+    alt: string;
+  }> = [
     {
-      image: "/assets/images/pexels-sora-shimazaki-5926396.jpg",
-      description: "Full Stack Web Development - Coursera, 2024"
+      image: "/assets/images/1743779729510.jpeg", // Update this path if you have a specific image
+      description: (
+        <>
+          I am super excited to share that I’ve just completed Introduction to Figma Basics. 🎓<br /><br />
+          I had a great experience learning industry aligned skills of <br /><br />
+          I’d recommend <span className="text-blue-400">#SkillUp</span> by <span className="text-blue-400">#Simplilearn</span> to anyone looking to learn today’s in-demand professional skills. Keep learning and adding the valued certificates to your professional portfolio. 🌟<br /><br />
+          Explore 200+ free courses: <a href="https://lnkd.in/gpUcigEi" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">https://lnkd.in/gpUcigEi</a><br /><br />
+          #Upskilling #Certification #JobReady #SkillUpBySimplilearn
+        </>
+      ),
+      link: "https://lnkd.in/gpUcigEi",
+      alt: "Introduction to Figma Basics Certificate"
     },
     {
-      image: "/assets/images/WhatsApp Image 2025-07-15 at 20.51.00_6f40e938.jpg",
-      description: "React Advanced Concepts - Udemy, 2023"
+      image: "/assets/images/1731269865102.jpeg", // Update this path if you have a specific image
+      description: (
+        <>
+          I am thrilled to have completed the Get Started with Python course, hosted by Shalitha Maduwantha through the Microsoft Student Ambassadors program. This learning experience has enhanced my understanding of Python programming and strengthened my skills for future projects in the field of technology and innovation. A big thank you to Shalitha for organizing and guiding us through this event!<br /><br />
+          Looking forward to applying this knowledge in my studies and professional journey. Onward and upward! 🚀<br /><br />
+          #MicrosoftLearn #Python #StudentAmbassador #LearningJourney #Programming #Technology #Achievement
+        </>
+      ),
+      alt: "Get Started with Python Certificate"
+    },
+    {
+      image: "/assets/images/image.jpg",
+      description: (
+        <>
+          Excited to share that I have successfully completed the Introduction to C++ course on Sololearn! This course helped me build a strong foundation in C++ programming, improving my problem-solving and coding skills. Looking forward to applying this knowledge in future projects!<br /><br />
+          <a href="https://lnkd.in/guYsUYma" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">📜 Certificate: https://lnkd.in/guYsUYma</a><br /><br />
+          #CPlusPlus #Programming #Sololearn #Learning #SoftwareDevelopment
+        </>
+      ),
+      link: "https://lnkd.in/guYsUYma",
+      linkedin: "https://www.linkedin.com/in/your-linkedin-profile/",
+      alt: "Introduction to C++ Certificate"
     }
   ];
 
@@ -184,19 +226,30 @@ export default function Portfolio() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-typing">
-            Hi, I'm a Web Developer.
+            Kavindu Chamod
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-slide-up">
             I create beautiful, responsive web applications and mobile experiences that solve real-world problems with
             clean, efficient code.
           </p>
-          <Button
-            onClick={() => scrollToSection("projects")}
-            size="lg"
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 text-lg animate-bounce-in hover:animate-pulse-glow transition-all duration-300"
-          >
-            View My Projects
-          </Button>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Button
+              onClick={() => scrollToSection("projects")}
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 text-lg animate-bounce-in hover:animate-pulse-glow transition-all duration-300 w-full sm:w-auto"
+            >
+              View My Projects
+            </Button>
+            <Link
+              href="https://www.linkedin.com/in/chamod-ranaweera-7159a1235"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-3 text-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-lg font-semibold animate-bounce-in hover:animate-pulse-glow transition-all duration-300 shadow-lg w-full sm:w-auto justify-center"
+            >
+              <Linkedin className="w-5 h-5 mr-2" />
+              LinkedIn Profile
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -207,16 +260,6 @@ export default function Portfolio() {
           <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full animate-pulse-slow"></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full animate-pulse-slow-delay"></div>
           <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-gradient-to-r from-pink-500/10 to-blue-500/10 rounded-full animate-pulse-slow-delay-2"></div>
-        </div>
-        {/* About section background image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/assets/images/pexels-sora-shimazaki-5926396.jpg"
-            alt="About Section Background"
-            fill
-            className="object-cover opacity-20"
-            priority={false}
-          />
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -360,41 +403,53 @@ export default function Portfolio() {
                     alt={project.name}
                     width={300}
                     height={200}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500 shadow-lg rounded-t-lg"
+                    style={{ animationDelay: `${index * 0.2}s` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-white group-hover:text-blue-400 transition-colors">
-                    {project.name}
-                  </CardTitle>
-                  <CardDescription className="text-gray-400">{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex gap-3">
-                    <Button
-                      size="sm"
-                      asChild
-                      className="bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-200"
-                    >
-                      <Link href={project.demoUrl}>
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Demo
-                      </Link>
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      asChild
-                      className="border-gray-600 hover:bg-gray-700 bg-transparent hover:scale-105 transition-all duration-200"
-                    >
-                      <Link href={project.githubUrl}>
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
+                {/* Project Card Foreground Content */}
+                <div className="relative z-10">
+                  <CardHeader>
+                    <CardTitle className="text-white group-hover:text-blue-400 transition-colors">
+                      {project.name}
+                    </CardTitle>
+                    <CardDescription className="text-gray-400">{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex gap-3">
+                      <Button
+                        size="sm"
+                        asChild
+                        className="bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                      >
+                        <Link href={project.demoUrl}>
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          <Image
+                            src={project.image || "/placeholder.svg"}
+                            alt={project.name}
+                            width={24}
+                            height={16}
+                            className="rounded shadow object-cover"
+                            style={{ display: 'inline-block' }}
+                          />
+                          Demo
+                        </Link>
+                      </Button>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        asChild
+                        className="border-gray-600 hover:bg-gray-700 bg-transparent hover:scale-105 transition-all duration-200"
+                      >
+                        <Link href={project.githubUrl}>
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </div>
               </Card>
             ))}
           </div>
@@ -407,32 +462,31 @@ export default function Portfolio() {
           <h3 className="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Certificates
           </h3>
-          <div className="flex flex-col items-center justify-center gap-6 mb-10">
-            <label className="block">
-              <span className="sr-only">Upload Certificate</span>
-              <input type="file" className="block w-full text-sm text-gray-400
-                file:mr-4 file:py-2 file:px-4
-                file:rounded-full file:border-0
-                file:text-sm file:font-semibold
-                file:bg-blue-50 file:text-blue-700
-                hover:file:bg-blue-100
-              "/>
-            </label>
-            <p className="text-gray-400 text-sm">Upload your certificate (PDF, JPG, PNG, etc.)</p>
-          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {certificates.map((cert, idx) => (
               <Card key={idx} className="bg-gray-800 border-4 border-blue-500/40 rounded-xl shadow-lg hover:border-blue-400 transition-all duration-300">
                 <div className="relative h-48 w-full mb-4">
                   <Image
                     src={cert.image}
-                    alt={cert.description}
+                    alt={cert.alt}
                     fill
                     className="object-cover rounded-t-lg"
                   />
                 </div>
                 <CardContent>
-                  <p className="text-gray-200 text-center text-sm">{cert.description}</p>
+                  <div className="text-gray-200 text-center text-sm">{cert.description}</div>
+                  {cert.link && (
+                    <div className="mt-4 flex justify-center">
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                      >
+                        View Certificate
+                      </a>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -483,16 +537,22 @@ export default function Portfolio() {
 
           <Card className="bg-gray-800 border-gray-700">
             <CardContent className="p-8">
-              <form className="space-y-6">
+              <form
+                action="https://formspree.io/f/mpwlpkpr"
+                method="POST"
+                className="space-y-6"
+              >
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Name
                   </label>
                   <Input
                     id="name"
+                    name="name"
                     type="text"
                     className="bg-gray-700 border-gray-600 text-white focus:border-blue-500"
                     placeholder="Your name"
+                    required
                   />
                 </div>
 
@@ -502,9 +562,11 @@ export default function Portfolio() {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     className="bg-gray-700 border-gray-600 text-white focus:border-blue-500"
                     placeholder="your.email@example.com"
+                    required
                   />
                 </div>
 
@@ -514,9 +576,11 @@ export default function Portfolio() {
                   </label>
                   <Textarea
                     id="message"
+                    name="message"
                     rows={5}
                     className="bg-gray-700 border-gray-600 text-white focus:border-blue-500"
                     placeholder="Tell me about your project..."
+                    required
                   />
                 </div>
 
@@ -537,12 +601,12 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-gray-400 mb-4 sm:mb-0">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p className="text-gray-400 mb-4 sm:mb-0">© {new Date().getFullYear()} Kavindu Chamod. All rights reserved.</p>
           <div className="flex space-x-6">
-            <Link href="https://github.com/Dev-Kavindu" className="text-gray-400 hover:text-blue-400 transition-colors">
+            <Link href="https://github.com/Dev-Kavindu" className="text-gray-400 hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
               <Github className="w-6 h-6" />
             </Link>
-            <Link href="https://linkedin.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+            <Link href="https://www.linkedin.com/in/chamod-ranaweera-7159a1235" className="text-gray-400 hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-6 h-6" />
             </Link>
           </div>
