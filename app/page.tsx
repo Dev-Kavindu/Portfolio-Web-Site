@@ -12,8 +12,6 @@ import { Github, Linkedin, Mail, ExternalLink, Smartphone, Globe, Palette, Menu,
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,38 +42,6 @@ export default function Portfolio() {
       element.scrollIntoView({ behavior: "smooth" })
     }
     setIsMenuOpen(false)
-  }
-
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    const formData = new FormData(e.currentTarget)
-    
-    try {
-      const response = await fetch("https://formspree.io/f/mpwlpkpr", {
-        method: "POST",
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      
-      if (response.ok) {
-        setIsFormSubmitted(true)
-        e.currentTarget.reset()
-        // Reset the success message after 5 seconds
-        setTimeout(() => {
-          setIsFormSubmitted(false)
-        }, 5000)
-      } else {
-        alert("There was an error sending your message. Please try again.")
-      }
-    } catch (error) {
-      alert("There was an error sending your message. Please try again.")
-    } finally {
-      setIsSubmitting(false)
-    }
   }
 
   const navItems = [
@@ -571,16 +537,9 @@ export default function Portfolio() {
 
           <Card className="bg-gray-800 border-gray-700">
             <CardContent className="p-8">
-              {isFormSubmitted && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-center">
-                  <div className="text-green-400 font-semibold text-lg mb-2">🎉 Thank You!</div>
-                  <p className="text-green-300">
-                    Your message has been sent successfully. I'll get back to you soon!
-                  </p>
-                </div>
-              )}
               <form
-                onSubmit={handleFormSubmit}
+                action="https://formspree.io/f/mpwlpkpr"
+                method="POST"
                 className="space-y-6"
               >
                 <div>
@@ -628,20 +587,10 @@ export default function Portfolio() {
                 <Button
                   type="submit"
                   size="lg"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Mail className="w-5 h-5 mr-2" />
-                      Send Message
-                    </>
-                  )}
+                  <Mail className="w-5 h-5 mr-2" />
+                  Send Message
                 </Button>
               </form>
             </CardContent>
